@@ -1,4 +1,9 @@
 const sum = require('./sum');
-test('suma 1 + 2 para dar 3', () => {
-  expect(suma(1, 2)).toBe(3);
-});
+function testSum() {
+  const result = sum(2,3)
+  if (result !== 5) {
+    throw new Error('no es igual al resultado esperado');
+  }
+  console.log('Aprobado')
+}
+testSum();
